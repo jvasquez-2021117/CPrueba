@@ -9,7 +9,7 @@ const { validateData } =  require('../utils/validate')
 
 exports.add = async (req, res) => {
     try {
-        console.log('hola);
+        console.log('hola');
         let data = req.body;
         if (!req.files || !req.files.image || !req.files.image.type) {
             return res.status(400).send({ message: 'No image file provided' });
