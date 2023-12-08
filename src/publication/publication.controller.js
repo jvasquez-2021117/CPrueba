@@ -22,7 +22,7 @@ exports.add = async (req, res) => {
         let msg = validateData(credentials);
         if(msg) return res.status(400).send({message: msg});
         const filePath = req.files.image.path;
-        const fileSplit = filePath.split('\\');
+         const fileName = path.basename(filePath)
         const fileName = fileSplit[2];
         const extension = path.extname(fileName).toLowerCase();
         const allowedExtensions = ['.png', '.jpg', '.jpeg'];
